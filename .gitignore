@@ -1,0 +1,17 @@
+.DS_Store
+.dart_tool/
+
+.packages
+.pub/
+
+build/
+
+.settings
+.metadata
+.classpath
+.project
+.vscode
+.idea
+
+pubspec.lock
+Podfile.lock
