@@ -42,5 +42,5 @@ dependencies:
 
     webview_flutter:
         git:
-        url: https://github.com/ganld/flutter_webview_jsbridge.git
-        ref: master   #Specify the branch   optional
+        url: https://github.com/sschen-cn/webview_flutter.git
+        ref: master
