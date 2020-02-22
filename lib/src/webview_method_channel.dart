@@ -4,6 +4,7 @@
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -48,7 +49,8 @@ class MethodChannelWebViewPlatform implements WebViewPlatformController {
         final String handlerName = call.arguments['handlerName'];
         final data = call.arguments['data'];
         if (handlerName != null) {
-          return _platformCallbacksHandler.onJsBridgeCall(handlerName, jsonEncode(data)); 
+          return _platformCallbacksHandler.onJsBridgeCall(
+              handlerName, Platform.isIOS ? jsonEncode(data) : data);
         }
         return null;
       case 'jsBridgeCall':
